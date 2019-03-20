@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2 fixed-top rounded">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2 sticky-top rounded">
     <a class="navbar-brand" href="index.php">My Website</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

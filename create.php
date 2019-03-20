@@ -10,7 +10,6 @@
          $email = $_POST["email"];
          $phone = $_POST["phone"];
 
-
          $roll = "";
          $rollCheck = "";
          $query = "SELECT RollNumber FROM Details WHERE RollNumber = ?";
@@ -26,7 +25,7 @@
                  }
              }
          }
-     
+         
          $query = "INSERT INTO Details (RollNumber, StudentName, Email, PhoneNo) VALUES (?, ?, ?, ?)";
          $statement = $connection->prepare($query);
          if($statement) {
@@ -60,10 +59,11 @@
                     </div>
                     <?php endif; ?>
                 <?php endif; ?>
-                <form method="post">
+                <form action="create.php" method="post">
                     <div class="form-group">
+                        <?php $rollNumber = isset($_POST['rollNumber']) ? $_POST['rollNumber'] : "" ?>
                         <label for="rollNumber">Roll Number :</label>
-                        <input type="text" name="rollNumber" id="rollNumber" class="form-control" placeholder="Roll Number" required/>
+                        <input type="text" name="rollNumber" id="rollNumber" class="form-control" value="<?php echo $rollNumber ?>" placeholder="Roll Number" required/>
                     </div>
                     <?php if(!empty($rollCheck)): ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert" >
@@ -75,17 +75,20 @@
                     </div>
                     <?php endif; ?>
                     <div class="form-group">
+                        <?php $stdName = isset($_POST['stdName']) ? $_POST['stdName'] : "" ?>
                         <label for="stdName">Student Name :</label>
-                        <input type="text" name="stdName" id="stdName" class="form-control" placeholder="Student Name" required/>
+                        <input type="text" name="stdName" id="stdName" class="form-control" placeholder="Student Name" value="<?php echo $stdName ?>" required/>
                     </div>
 
                     <div class="form-group">
+                        <?php $email = isset($_POST['email']) ? $_POST['email'] : "" ?>
                         <label for="email">Email :</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Email ID" required/>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email ID" value="<?php echo $email ?>" required/>
                     </div>
                     <div class="form-group">
+                    <?php $phone = isset($_POST['phone']) ? $_POST['phone'] : "" ?>
                         <label for="phone">Phone Number :</label>
-                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" required/>
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" value="<?php echo $phone ?>" required/>
                     </div>
                     <div class="form-group row">
                         <input type="reset" value="Reset Details" class="btn btn-sm btn-danger col-md-2 ml-4" >
