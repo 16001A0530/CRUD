@@ -38,8 +38,8 @@
                         <td><?php echo $phone ?></td>
                         <td><?php echo $email ?></td>
                         <td>
-                            <a href="edit.php?rollNumber=<?php echo $roll ?>" class="ml-2 btn btn-light btn-sm active" role="button">Edit Details</a>
-                            <a href="delete.php?rollNumber=<?php echo $roll ?>" class="ml-2 btn btn-light btn-sm active" role="button">Delete</a>
+                            <a href="temp.php?rollNumber=<?php echo $roll ?>" class="ml-2 btn btn-light btn-sm active" role="button">Edit Details</a>
+                            <a href="delete.php?rollNumber=<?php echo $roll ?>" onclick="return confirm('Dou you want to delete this entry?')" class="ml-2 btn btn-light btn-sm active" role="button">Delete</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
