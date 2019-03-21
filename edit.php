@@ -23,7 +23,7 @@
 <div class="container mt-5">
     <div class="card mt-5">
         <div class="card-header">
-            <h2 class="text-center" >Edit Student Details</h2>
+            <h3 class="text-center" >Edit <?php echo $roll; ?> Details</h3>
         </div>
         <div class="card-body">
             <form action="update.php" method="post">
@@ -45,9 +45,8 @@
                     <input type="text" name="phone" value="<?php echo $temp_phone; ?>" id="phone" class="form-control" placeholder="Phone Number" required/>
                 </div>
                 <div class="form-group row">
-                    <input type="reset" value="Reset Details" class="btn btn-sm btn-danger col-md-2 ml-4" >
-                    <span class="col-md-7 "></span>
-                    <input type="submit" value="Update Details" class="btn btn-sm btn-info col-md-2  ml-5">
+                    <span class="col-9 mr-2"></span>
+                    <input type="submit" value="Update Details" class="btn btn-sm btn-info col-2  ml-5">
                 </div>
             </form>
         </div>

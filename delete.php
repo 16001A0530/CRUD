@@ -12,6 +12,7 @@
             echo '<div class="text-center container mt-5 alert alert-success rounded" role="alert">
                 Sucessfully Deleted.
             </div>';
+            header("Location:index.php");
         }else {
             echo '<div class="text-center container mt-5 alert alert-success rounded" role="alert">
                 Error Occured.

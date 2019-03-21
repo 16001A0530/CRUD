@@ -33,8 +33,10 @@
              if($statement->execute()) {
                  $message = "Data Send Successfully.";
                  $statement->close();
+                 header("Location:index.php");
              } else {
                  $message = "Error Occured.";
+                 $statement->close();
              }
          }
 
